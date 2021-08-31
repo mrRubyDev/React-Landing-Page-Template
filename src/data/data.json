@@ -1,6 +1,6 @@
 {
   "Header": {
-    "title": "We are a Landing Page",
+    "title": "Medicina de confianza",
     "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sed commodo nibh ante facilisis bibendum."
   },
   "About": {
@@ -85,18 +85,18 @@
   "Team": [
     {
       "img": "img/team/01.jpg",
-      "name": "John Doe",
-      "job": "Director"
+      "name": "Dr. Pablo Rubinstein",
+      "job": "Fundador y Pneumólogo"
     },
     {
       "img": "img/team/02.jpg",
-      "name": "Mike Doe",
-      "job": "Senior Designer"
+      "name": "Dr. Ricardo Leiro",
+      "job": "Anestesiólogo"
     },
     {
       "img": "img/team/03.jpg",
-      "name": "Jane Doe",
-      "job": "Senior Designer"
+      "name": "Isabel Amo",
+      "job": "Psicóloga"
     },
     {
       "img": "img/team/04.jpg",
@@ -105,12 +105,9 @@
     }
   ],
   "Contact": {
-    "address": "4321 California St, San Francisco, CA 12345 ",
-    "phone": "+1 123 456 1234",
-    "email": "info@company.com",
-    "facebook": "fb.com",
-    "twitter": "twitter.com",
-    "youtube": "youtube.com"
+    "address": " Carrer de Balmes, 271, 08006 Barcelona",
+    "phone": "+34 655 074 099",
+    "email": "info@company.com"
   },
   "Features": [
     {
