@@ -1,14 +1,34 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App";
+import * as serviceWorker from "./serviceWorker";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Privacy from "./components/Privacy";
+import Legal from "./components/Legal";
+import Cookies from "./components/Cookies";
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+	<Router>
+		<React.StrictMode>
+			<Switch>
+				<Route path="/" exact>
+					<App />
+				</Route>
+				<Route path="/privacy" exact>
+					<Privacy />
+				</Route>
+				<Route path="/legal" exact>
+					<Legal />
+				</Route>
+				<Route path="/cookies" exact>
+					<Cookies />
+				</Route>
+			</Switch>
+		</React.StrictMode>
+	</Router>,
+
+	document.getElementById("root")
 );
 
 // If you want your app to work offline and load faster, you can change

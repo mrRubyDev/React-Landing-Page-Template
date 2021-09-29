@@ -116,6 +116,7 @@ textarea {
 	margin: 0;
 	font: inherit;
 	color: inherit;
+	resize: none;
 }
 button {
 	overflow: visible;
@@ -175,6 +176,7 @@ legend {
 }
 textarea {
 	overflow: auto;
+	resize: none;
 }
 optgroup {
 	font-weight: bold;
@@ -1101,6 +1103,7 @@ textarea {
 	font-family: inherit;
 	font-size: inherit;
 	line-height: inherit;
+	resize: none;
 }
 a {
 	color: #337ab7;
@@ -2696,6 +2699,7 @@ fieldset[disabled] .form-control {
 }
 textarea.form-control {
 	height: auto;
+	resize: none;
 }
 input[type="search"] {
 	-webkit-appearance: none;

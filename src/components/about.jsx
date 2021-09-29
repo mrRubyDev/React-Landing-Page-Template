@@ -5,13 +5,19 @@ export const About = props => {
 				<div className="row">
 					<div className="col-xs-12 col-md-6">
 						{" "}
-						<img src="img/about.jpg" className="img-responsive" alt="" />{" "}
+						<img
+							src="img/team/doctor-team.jpeg"
+							className="img-responsive"
+							alt=""
+						/>{" "}
 					</div>
 					<div className="col-xs-12 col-md-6">
 						<div className="about-text">
 							<h2>Sobre nosotros</h2>
 							<p>{props.data ? props.data.paragraph : "loading..."}</p>
-							<h3>Por qué confiar en nosotros?</h3>
+							<p>{props.data && props.data.paragraph1}</p>
+							<p>{props.data && props.data.paragraph2}</p>
+							{/* <h3>Por qué confiar en nosotros?</h3>
 							<div className="list-style">
 								<div className="col-lg-6 col-sm-6 col-xs-12">
 									<ul>
@@ -31,10 +37,16 @@ export const About = props => {
 											: "loading"}
 									</ul>
 								</div>
-							</div>
+							</div> */}
 						</div>
 					</div>
 				</div>
+
+				<p>{props.data && props.data.paragraph3}</p>
+				<p>{props.data && props.data.paragraph4}</p>
+				<p>{props.data && props.data.paragraph5}</p>
+				<p>{props.data && props.data.paragraph6}</p>
+				<p>{props.data && props.data.paragraph7}</p>
 			</div>
 		</div>
 	);

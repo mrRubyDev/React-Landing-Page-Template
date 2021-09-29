@@ -440,8 +440,16 @@ header .intro-text {
 	font-weight: 600;
 	color: #666;
 }
+
+.footer-text:hover {
+	cursor: pointer;
+	color: lightskyblue;
+}
 /* Team Section */
 #team {
+	padding: 100px 0;
+}
+#book {
 	padding: 100px 0;
 }
 #team h4 {

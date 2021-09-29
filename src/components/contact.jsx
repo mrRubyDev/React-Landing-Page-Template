@@ -6,9 +6,12 @@ const initialState = {
 	name: "",
 	email: "",
 	message: "",
+	phone: "",
+	id: "",
 };
 export const Contact = props => {
-	const [{ name, email, message }, setState] = useState(initialState);
+	const [{ name, email, message, phone, id }, setState] =
+		useState(initialState);
 	const handleChange = e => {
 		const { name, value } = e.target;
 		setState(prevState => ({ ...prevState, [name]: value }));
@@ -21,7 +24,7 @@ export const Contact = props => {
 			.send(
 				process.env.REACT_APP_SERVICE_ID,
 				process.env.REACT_APP_TEMPLATE_ID,
-				{ from_name: name, message, reply_to: email },
+				{ from_name: name, message, reply_to: email, phoneNumber: phone, id },
 				process.env.REACT_APP_USER_ID
 			)
 			.then(
@@ -41,10 +44,10 @@ export const Contact = props => {
 					<div className="col-md-8">
 						<div className="row">
 							<div className="section-title">
-								<h2>Ponte en contacto</h2>
+								<h2>Póngase en contacto</h2>
 								<p>
-									Rellena todos los campos del formulario con tu consulta y nos
-									pondremos en contacto lo antes posible.
+									Rellene todos los campos del formulario con su consulta y nos
+									pondremos en contacto con usted lo antes posible.
 								</p>
 							</div>
 							<form name="sentMessage" validate onSubmit={handleSubmit}>
@@ -72,6 +75,33 @@ export const Contact = props => {
 												className="form-control"
 												placeholder="Email"
 												required
+												onChange={handleChange}
+											/>
+											<p className="help-block text-danger"></p>
+										</div>
+									</div>
+									<div className="col-md-6">
+										<div className="form-group">
+											<input
+												type="phone_number"
+												id="phone"
+												name="phone"
+												className="form-control"
+												placeholder="Teléfono"
+												required
+												onChange={handleChange}
+											/>
+											<p className="help-block text-danger"></p>
+										</div>
+									</div>
+									<div className="col-md-6">
+										<div className="form-group">
+											<input
+												type="text"
+												id="id"
+												name="id"
+												className="form-control"
+												placeholder="D.N.I."
 												onChange={handleChange}
 											/>
 											<p className="help-block text-danger"></p>
@@ -124,16 +154,6 @@ export const Contact = props => {
 							</p>
 						</div>
 					</div>
-				</div>
-			</div>
-			<div id="footer">
-				<div className="container text-center">
-					<p>
-						&copy;{" "}
-						<a href="http://www.rubitecconsulting.com" rel="nofollow">
-							Rubitec Consulting
-						</a>
-					</p>
 				</div>
 			</div>
 		</div>

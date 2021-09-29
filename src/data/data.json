@@ -1,10 +1,16 @@
 {
   "Header": {
-    "title": "Medicina de confianza",
+    "title": "Medicina privada online",
     "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sed commodo nibh ante facilisis bibendum."
   },
   "About": {
-    "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "paragraph": "Somos un grupo de profesionales sanitarios apasionados con nuestro trabajo, que creemos en la excelencia de la medicina personalizada, y disfrutamos viendo pacientes y ayudando a las personas a sentirse mejor.",
+    "paragraph1": "Nuestro equipo médico tiene entre 6 y 8 años de formación de pregrado en la facultad de medicina, más 1 o 2 años de “internado”, y/o medicina general, más 4 o 5 años de formación como especialista MIR (médico interno residente), en algunos casos con doble especialización. A esto se suma la formación específica dentro de la especialidad, una vez acabada el período de formación MIR. ",
+    "paragraph2": "Cada uno de nosotros tiene su área de especial interés dentro de nuestra especialidad, a la cual hemos dedicado más tiempo en formarnos, y tenemos más experiencia profesional. Si tiene algún problema en concreto, de difícil solución, podemos ayudarlo a seleccionar mejor el especialista más adecuado para usted.",
+    "paragraph3": "Además, varios de nosotros tenemos máster en temas concretos, y doctorado, el máximo título que se puede obtener dentro de la formación universitaria. A esto se suma una experiencia de más de 20 años de actividad asistencial, colaborando con hospitales de tercer nivel con elevada complejidad.",
+    "paragraph5": "Nuestro grupo realiza más de 600 broncoscopias al año, 150 ecobroncoscopias, 100 cirugías torácicas y más de 10000 visitas y pruebas diagnósticas en el área respiratoria.",
+    "paragraph6": "Nuestro equipo psicológico tiene amplia experiencia en tratar pacientes con diversos síntomas y enfermedades respiratorias, con especial dedicación a la psiconcología, al manejo del estrés post-traumático para pacientes con experiencias vitales (ingreso en cuidados intensivos, secuelas COVID, etc), la disnea suspirosa, fibromalgia y otras enfermedades.",
+    "paragraph7": "La formación científica es fundamental. Pero lo más trascendente: nos importan las personas! Cuente con nosotros para sus problemas de salud. Estaremos encantados de poder ayudarle.",
     "Why": [
       "Lorem ipsum dolor",
       "Tempor incididunt",
@@ -85,29 +91,113 @@
   "Team": [
     {
       "img": "img/team/01.jpg",
-      "name": "Dr. Pablo Rubinstein",
-      "job": "Fundador y Pneumólogo"
+      "name": "Dr Pablo Rubinstein, PhD",
+			"doctor": true,
+      "job": "Médico internista y neumólogo. Especialista en Neumología intervencionista, con especial interés en endoscopia del cáncer de pulmón y enfermedades de la pleura."	
     },
     {
       "img": "img/team/02.jpg",
-      "name": "Dr. Ricardo Leiro",
-      "job": "Anestesiólogo"
+      "name": "Dr Federico Gómez Yerón, PhD",
+			"doctor": true,
+      "job": "Médico neumólogo, especializado en pruebas de función pulmonar."
     },
     {
       "img": "img/team/03.jpg",
-      "name": "Isabel Amo",
-      "job": "Psicóloga"
+      "name": "Dr Agustín García",
+			"doctor": true,
+      "job": "Médico internista y neumólogo, especialista en enfermedades vascualres pulmonares e Hipertensión pulmonar."
+
     },
     {
       "img": "img/team/04.jpg",
-      "name": "Karen Doe",
-      "job": "Project Manager"
-    }
+      "name": "Dra Lisbeth Hernández",
+			"doctor": true,
+      "job": "Médico neumólogo, especialista en medicina familair y comunitaria, con especial interés en deshabituación tabáquica y enfermedades relacionadas con el tabaco."
+    },
+    {
+      "img": "img/team/04.jpg",
+			"doctor": true,
+      "name": "Dr Albert Martos",
+      "job": "Médico neumólogo, especializado en alergia respiratoria."
+    },
+    {
+      "img": "img/team/04.jpg",
+			"doctor": true,
+      "name": "Dra Cristina Murio",
+      "job": "Médico neumólogo, con amplia experiencia en la industria farmacéutica, y gestión de fármacos para asma y EPOC."
+    },
+    {
+      "img": "img/team/04.jpg",
+			"doctor": true,
+      "name": "Dr Eduardo Loeb",
+      "job": "Médico internista y neumólogo. Especializado en EPOC y enfermedades del sueño."
+    },
+    {
+      "img": "img/team/04.jpg",
+			"doctor": true,
+      "name": "Dra Thais Lovera",
+      "job": "Médico pediatra y neumóloga, especialista en neumología pediátrica."
+    },
+    {
+      "img": "img/team/04.jpg",
+			"doctor": true,
+      "name": "Dr Ricardo Leiro",
+      "job": "Médico internista y especialista en Unidad del Dolor. Postgrado de neumología. Especial interés en diagnóstico y tratamiento del dolor agudo y crónico."
+    },
+
+    {
+      "img": "img/team/04.jpg",
+			"doctor": true,
+      "name": "Dra Jonela di Muro",
+      "job": "Médico especialista en neumología."
+    },
+    {
+      "img": "img/team/04.jpg",
+			"doctor": true,
+      "name": "Dra Maylen Fariñas",
+      "job": "Médico alergóloga, adultos y niños."
+    },
+    {
+      "img": "img/team/04.jpg",
+			"doctor": true,
+      "name": "Dr Rafael Aguiló",
+      "job": "Médico cirujano torácico. Especializado en cirugía del cáncer de pulmón y de la articulación esternoclavicular."
+    },
+    {
+      "img": "img/team/04.jpg",
+			"doctor": true,
+      "name": "Dr Pedro Rodríguez Martín",
+      "job": "Médico especialista en neumología y en cirugía torácica."
+    },
+    {
+      "img": "img/team/04.jpg",
+      "name": "DUE Marta García Sánchez",
+      "job": "Enfermera especializada en enfermedades del sueño.",
+			"doctor": false
+    },
+    {
+      "img": "img/team/04.jpg",
+			"doctor": true,
+      "name": "Jordina Fontàs",
+      "job": "Fisioterapeuta respiratoria de niños y adultos."
+    },
+    {
+      "img": "img/team/04.jpg",
+			"doctor": true,
+      "name": "Isabel Amo Mora",
+      "job": "Psicóloga clínica especializada en enfermedades orgánicas, estrés post-traumático y sindrome ansioso-depresivo."
+    },
+		{
+			"img": "img/team/04.jpg",
+			"doctor": false,
+			"name": "Ivelisse Tovar",
+			"job": "Responsable de Secretaría"
+		}
   ],
   "Contact": {
     "address": " Carrer de Balmes, 271, 08006 Barcelona",
-    "phone": "+34 655 074 099",
-    "email": "info@company.com"
+    "phone": "931 095 545",
+    "email": "itovar@primedica.org"
   },
   "Features": [
     {
