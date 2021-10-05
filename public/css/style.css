@@ -173,7 +173,20 @@ hr {
 	margin: 0;
 	font-size: 15px;
 	font-weight: 500;
-	border-radius: 25px;
+	transition: all 0.5s linear;
+	border: 0;
+}
+.btn-custom-mod {
+	font-family: "Raleway", sans-serif;
+	text-transform: uppercase;
+	color: #fff;
+	background-color: #5ca9fb;
+	background-image: linear-gradient(to right, #cacaca 0%, #c7c7c7 100%);
+	padding: 14px 34px;
+	letter-spacing: 1px;
+	margin: 0;
+	font-size: 15px;
+	font-weight: 500;
 	transition: all 0.5s linear;
 	border: 0;
 }
@@ -516,6 +529,7 @@ header .intro-text {
 	color: #1f386e;
 	background: #fff;
 }
+
 label {
 	font-size: 12px;
 	font-weight: 400;

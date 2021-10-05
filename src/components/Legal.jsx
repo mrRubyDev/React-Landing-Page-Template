@@ -1,6 +1,6 @@
 import React from "react";
 import Footer from "./Footer";
-import { NavigationExternal } from "./navigationExternal";
+import { NavigationExternal } from "./NavigationExternal";
 
 export default function Legal() {
 	return (

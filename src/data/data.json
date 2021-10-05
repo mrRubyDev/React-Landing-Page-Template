@@ -94,6 +94,7 @@
       "name": "Dr Pablo Rubinstein, PhD",
 			"linkedin": "https://www.linkedin.com/in/pablo-rubinstein-agu%C3%B1in-md-msc-phd-004558a3/",
 			"doctor": true,
+			"id": 0,
       "job": "Médico internista y neumólogo. Especialista en Neumología intervencionista, con especial interés en endoscopia del cáncer de pulmón y enfermedades de la pleura."	
     },
     {
@@ -101,6 +102,7 @@
       "name": "Dr Federico Gómez Yerón, PhD",
 			"linkedin": "https://es.linkedin.com/in/federico-pablo-g%C3%B3mez-yer%C3%B3n-60503939",
 			"doctor": true,
+			"id": 1,
       "job": "Médico neumólogo, especializado en pruebas de función pulmonar."
     },
     {
@@ -108,6 +110,7 @@
       "name": "Dr Agustín García",
 			"linkedin": "https://es.linkedin.com/in/agustin-garcia-461082177",
 			"doctor": true,
+			"id": 2,
       "job": "Médico internista y neumólogo, especialista en enfermedades vascualres pulmonares e Hipertensión pulmonar."
 
     },
@@ -116,6 +119,7 @@
       "name": "Dra Lisbeth Hernández",
 			"linkedin": "https://es.linkedin.com/in/lisbeth-celeste-hern%C3%A1ndez-m%C3%A1rquez-88a7a815",
 			"doctor": true,
+			"id": 3,
       "job": "Médico neumólogo, especialista en medicina familair y comunitaria, con especial interés en deshabituación tabáquica y enfermedades relacionadas con el tabaco."
     },
     {
@@ -123,6 +127,7 @@
 			"doctor": true,
       "name": "Dr Albert Martos",
 			"linkedin": "https://es.linkedin.com/in/jose-alberto-martos-velasco-4a2b2b68",
+			"id": 0,
       "job": "Médico neumólogo, especializado en alergia respiratoria."
     },
     {
@@ -130,24 +135,30 @@
 			"doctor": true,
       "name": "Dra Cristina Murio",
 			"linkedin": "https://es.linkedin.com/in/cristina-murio-pujol-125b2534",
+			"id": 4,
       "job": "Médico neumólogo, con amplia experiencia en la industria farmacéutica, y gestión de fármacos para asma y EPOC."
     },
     {
       "img": "img/team/04.jpg",
 			"doctor": true,
       "name": "Dr Eduardo Loeb",
+
+			"id": 5,
       "job": "Médico internista y neumólogo. Especializado en EPOC y enfermedades del sueño."
     },
     {
       "img": "img/team/04.jpg",
 			"doctor": true,
       "name": "Dra Thais Lovera",
+
+			"id": 6,
       "job": "Médico pediatra y neumóloga, especialista en neumología pediátrica."
     },
     {
       "img": "img/team/04.jpg",
 			"doctor": true,
       "name": "Dr Ricardo Leiro",
+			"id": 7,
       "job": "Médico internista y especialista en Unidad del Dolor. Postgrado de neumología. Especial interés en diagnóstico y tratamiento del dolor agudo y crónico."
     },
 
@@ -156,6 +167,7 @@
 			"doctor": true,
       "name": "Dra Jonela di Muro",
 			"linkedin": "https://es.linkedin.com/in/jonela-di-muro-020939126",
+			"id": 8,
       "job": "Médico especialista en neumología."
     },
     {
@@ -163,6 +175,7 @@
 			"doctor": true,
       "name": "Dra Maylen Fariñas",
 			"linkedin": "https://es.linkedin.com/in/maylen-fari%C3%B1as-baa0b1ba",
+			"id": 9,
       "job": "Médico alergóloga, adultos y niños."
     },
     {
@@ -170,6 +183,7 @@
 			"doctor": true,
       "name": "Dr Rafael Aguiló",
 			"linkedin": "https://es.linkedin.com/in/rafael-aguil%C3%B3-espases-658541219",
+			"id": 10,
       "job": "Médico cirujano torácico. Especializado en cirugía del cáncer de pulmón y de la articulación esternoclavicular."
     },
     {
@@ -177,12 +191,14 @@
 			"doctor": true,
       "name": "Dr Pedro Rodríguez Martín",
 			"linkedin": "https://es.linkedin.com/in/pedro-juan-rodr%C3%ADguez-mart%C3%ADn-6928b55b",
+			"id": 11,
       "job": "Médico especialista en neumología y en cirugía torácica."
     },
     {
       "img": "img/team/04.jpg",
       "name": "DUE Marta García Sánchez",
 			"linkedin": "https://es.linkedin.com/in/marta-garcia-sanchez-03878479",
+			"id": 12,
       "job": "Enfermera especializada en enfermedades del sueño.",
 			"doctor": false
     },
@@ -191,6 +207,7 @@
 			"doctor": true,
       "name": "Jordina Fontàs",
 			"linkedin": "https://es.linkedin.com/in/jordina-font%C3%A0s-prat-304b7290",
+			"id": 13,
       "job": "Fisioterapeuta respiratoria de niños y adultos."
     },
     {
@@ -198,6 +215,7 @@
 			"doctor": true,
       "name": "Isabel Amo Mora",
 			"linkedin": "https://www.linkedin.com/in/isabelamo/",
+			"id": 14,
       "job": "Psicóloga clínica especializada en enfermedades orgánicas, estrés post-traumático y sindrome ansioso-depresivo."
     },
 		{

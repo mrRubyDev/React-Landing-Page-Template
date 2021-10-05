@@ -1,5 +1,7 @@
+import React from "react";
 import Logo from "../Basari.png";
-export const NavigationExternal = () => {
+
+export default function checkoutNavbar() {
 	return (
 		<nav id="menu" className="navbar navbar-default navbar-fixed-top">
 			<div className="container">
@@ -15,7 +17,7 @@ export const NavigationExternal = () => {
 						<span className="icon-bar"></span>{" "}
 						<span className="icon-bar"></span>{" "}
 					</button>
-					<a className="navbar-brand page-scroll" href="/">
+					<a className="navbar-brand page-scroll" href="#page-top">
 						<img
 							src={Logo}
 							style={{ height: "100%", width: "100%", objectFit: "cover" }}
@@ -23,7 +25,18 @@ export const NavigationExternal = () => {
 						/>
 					</a>{" "}
 				</div>
+
+				<div
+					className="collapse navbar-collapse"
+					id="bs-example-navbar-collapse-1"
+				>
+					<ul className="nav navbar-nav navbar-right">
+						<li>
+							<a href="#about">Volver</a>
+						</li>
+					</ul>
+				</div>
 			</div>
 		</nav>
 	);
-};
+}

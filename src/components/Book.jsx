@@ -1,5 +1,6 @@
 import React, { useState, useContext } from "react";
-import App, { AppointmentsContext } from "../App";
+import { useHistory } from "react-router";
+import { AppointmentsContext } from "../App";
 const initialState = {
 	name: "",
 	second_name: "",
@@ -10,22 +11,36 @@ const initialState = {
 	doctor: "",
 	fecha: "",
 	hora: "",
-	comentarios: "",
 };
+
+const POSSIBLE_TIMINGS = [
+	"09:00",
+	"09:30",
+	"10:00",
+	"10:30",
+	"11:00",
+	"11:30",
+	"12:00",
+	"12:30",
+	"13:00",
+	"13:30",
+	"14:00",
+	"14:30",
+	"15:00",
+	"15:30",
+	"16:00",
+	"16:30",
+	"17:00",
+	"17:30",
+	"18:00",
+	"18:30",
+	"19:00",
+	"19:30",
+	"20:00",
+];
 export default function Book({ data }) {
 	const [
-		{
-			name,
-			second_name,
-			email,
-			message,
-			phone,
-			id,
-			doctor,
-			fecha,
-			hora,
-			comentarios,
-		},
+		{ name, second_name, email, message, phone, id, doctor, fecha, hora },
 		setState,
 	] = useState(initialState);
 	const [errorMessage, setErrorMessage] = useState("");
@@ -33,9 +48,9 @@ export default function Book({ data }) {
 		const { name, value } = e.target;
 		setState(prevState => ({ ...prevState, [name]: value }));
 	};
-	const unavailableDates = useContext(AppointmentsContext).unavailable;
-
-	const clearState = () => setState({ ...initialState });
+	const context = useContext(AppointmentsContext);
+	const unavailableDates = context.unavailable;
+	const history = useHistory();
 	const canSubmit = () => {
 		const emailSubmit = emailValidation(email);
 		const nameSubmit = nameValidation("Name", name);
@@ -93,21 +108,38 @@ export default function Book({ data }) {
 	const handleSubmit = e => {
 		e.preventDefault();
 		if (canSubmit) {
-			console.log({
+			context.setAppointment({
 				name,
 				second_name,
 				email,
 				message,
 				phone,
-				id,
+				id: id.toUpperCase(),
 				doctor,
 				fecha,
 				hora,
-				comentarios,
 			});
-			clearState();
+			history.push("/checkout");
 		}
 	};
+
+	const forbiddenTimings = (doctor_id, date) => {
+		if (!doctor_id || !date.length) return [];
+		if (new Date(date).getDay() === 7) return true;
+		else {
+			if (unavailableDates[doctor_id]) {
+				const hours = [];
+				unavailableDates[doctor_id].forEach(d => {
+					const split = d.split("T");
+					if (split[0] === date) {
+						hours.push(split[1]);
+					}
+				});
+				return hours;
+			} else return true;
+		}
+	};
+
 	return (
 		<div
 			style={{
@@ -215,15 +247,18 @@ export default function Book({ data }) {
 								type="text"
 								id="doctor"
 								name="doctor"
+								value="Seleccione un médico"
 								className="form-control"
-								placeholder="Doctor"
 								onChange={handleChange}
 							>
+								<option disabled defaultValue>
+									Seleccione un médico
+								</option>
 								{data &&
 									data.map(
 										(el, i) =>
 											el.doctor && (
-												<option key={i} value={el.name}>
+												<option key={i} value={el.id}>
 													{el.name}
 												</option>
 											)
@@ -236,9 +271,10 @@ export default function Book({ data }) {
 						<div className="form-group">
 							<input
 								type="date"
-								id="date"
-								name="date"
+								id="fecha"
+								name="fecha"
 								className="form-control"
+								min={new Date().toISOString().split("T")[0]}
 								required
 								onChange={handleChange}
 							/>
@@ -249,17 +285,20 @@ export default function Book({ data }) {
 						<div className="form-group">
 							<select
 								type="text"
-								id="doctor"
-								name="doctor"
+								id="hora"
+								name="hora"
 								className="form-control"
-								placeholder="Doctor"
+								placeholder="Seleccione una hora"
 								required
 								onChange={handleChange}
 							>
-								<option value="08:00">08:00</option>)
-								<option value="08:00">08:30</option>)
-								<option value="08:00">09:00</option>)
-								<option value="08:00">09:30</option>)
+								{POSSIBLE_TIMINGS.filter(
+									el => !forbiddenTimings(doctor, fecha).includes(el)
+								).map((time, id) => (
+									<option value={time} key={id}>
+										{time}
+									</option>
+								))}
 							</select>
 						</div>
 					</div>
