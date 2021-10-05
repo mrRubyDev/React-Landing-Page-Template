@@ -1,6 +1,6 @@
 {
   "Header": {
-    "title": "Medicina privada online",
+    "title": "Medicina privada",
     "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sed commodo nibh ante facilisis bibendum."
   },
   "About": {
@@ -92,18 +92,21 @@
     {
       "img": "img/team/01.jpg",
       "name": "Dr Pablo Rubinstein, PhD",
+			"linkedin": "https://www.linkedin.com/in/pablo-rubinstein-agu%C3%B1in-md-msc-phd-004558a3/",
 			"doctor": true,
       "job": "Médico internista y neumólogo. Especialista en Neumología intervencionista, con especial interés en endoscopia del cáncer de pulmón y enfermedades de la pleura."	
     },
     {
       "img": "img/team/02.jpg",
       "name": "Dr Federico Gómez Yerón, PhD",
+			"linkedin": "https://es.linkedin.com/in/federico-pablo-g%C3%B3mez-yer%C3%B3n-60503939",
 			"doctor": true,
       "job": "Médico neumólogo, especializado en pruebas de función pulmonar."
     },
     {
       "img": "img/team/03.jpg",
       "name": "Dr Agustín García",
+			"linkedin": "https://es.linkedin.com/in/agustin-garcia-461082177",
 			"doctor": true,
       "job": "Médico internista y neumólogo, especialista en enfermedades vascualres pulmonares e Hipertensión pulmonar."
 
@@ -111,6 +114,7 @@
     {
       "img": "img/team/04.jpg",
       "name": "Dra Lisbeth Hernández",
+			"linkedin": "https://es.linkedin.com/in/lisbeth-celeste-hern%C3%A1ndez-m%C3%A1rquez-88a7a815",
 			"doctor": true,
       "job": "Médico neumólogo, especialista en medicina familair y comunitaria, con especial interés en deshabituación tabáquica y enfermedades relacionadas con el tabaco."
     },
@@ -118,12 +122,14 @@
       "img": "img/team/04.jpg",
 			"doctor": true,
       "name": "Dr Albert Martos",
+			"linkedin": "https://es.linkedin.com/in/jose-alberto-martos-velasco-4a2b2b68",
       "job": "Médico neumólogo, especializado en alergia respiratoria."
     },
     {
       "img": "img/team/04.jpg",
 			"doctor": true,
       "name": "Dra Cristina Murio",
+			"linkedin": "https://es.linkedin.com/in/cristina-murio-pujol-125b2534",
       "job": "Médico neumólogo, con amplia experiencia en la industria farmacéutica, y gestión de fármacos para asma y EPOC."
     },
     {
@@ -149,29 +155,34 @@
       "img": "img/team/04.jpg",
 			"doctor": true,
       "name": "Dra Jonela di Muro",
+			"linkedin": "https://es.linkedin.com/in/jonela-di-muro-020939126",
       "job": "Médico especialista en neumología."
     },
     {
       "img": "img/team/04.jpg",
 			"doctor": true,
       "name": "Dra Maylen Fariñas",
+			"linkedin": "https://es.linkedin.com/in/maylen-fari%C3%B1as-baa0b1ba",
       "job": "Médico alergóloga, adultos y niños."
     },
     {
       "img": "img/team/04.jpg",
 			"doctor": true,
       "name": "Dr Rafael Aguiló",
+			"linkedin": "https://es.linkedin.com/in/rafael-aguil%C3%B3-espases-658541219",
       "job": "Médico cirujano torácico. Especializado en cirugía del cáncer de pulmón y de la articulación esternoclavicular."
     },
     {
       "img": "img/team/04.jpg",
 			"doctor": true,
       "name": "Dr Pedro Rodríguez Martín",
+			"linkedin": "https://es.linkedin.com/in/pedro-juan-rodr%C3%ADguez-mart%C3%ADn-6928b55b",
       "job": "Médico especialista en neumología y en cirugía torácica."
     },
     {
       "img": "img/team/04.jpg",
       "name": "DUE Marta García Sánchez",
+			"linkedin": "https://es.linkedin.com/in/marta-garcia-sanchez-03878479",
       "job": "Enfermera especializada en enfermedades del sueño.",
 			"doctor": false
     },
@@ -179,18 +190,21 @@
       "img": "img/team/04.jpg",
 			"doctor": true,
       "name": "Jordina Fontàs",
+			"linkedin": "https://es.linkedin.com/in/jordina-font%C3%A0s-prat-304b7290",
       "job": "Fisioterapeuta respiratoria de niños y adultos."
     },
     {
       "img": "img/team/04.jpg",
 			"doctor": true,
       "name": "Isabel Amo Mora",
+			"linkedin": "https://www.linkedin.com/in/isabelamo/",
       "job": "Psicóloga clínica especializada en enfermedades orgánicas, estrés post-traumático y sindrome ansioso-depresivo."
     },
 		{
 			"img": "img/team/04.jpg",
 			"doctor": false,
 			"name": "Ivelisse Tovar",
+			"linkedin": "https://www.linkedin.com/in/ivelisse-alejandra-tovar-torrealba-11ab3324/",
 			"job": "Responsable de Secretaría"
 		}
   ],

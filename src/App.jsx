@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, createContext } from "react";
 import { Navigation } from "./components/navigation";
 import { Header } from "./components/header";
 import { About } from "./components/about";
@@ -9,20 +9,32 @@ import Book from "./components/Book";
 import JsonData from "./data/data.json";
 import SmoothScroll from "smooth-scroll";
 import "./App.css";
+import { GetUnavailableDates } from "./api";
 
 export const scroll = new SmoothScroll('a[href*="#"]', {
 	speed: 1000,
 	speedAsDuration: true,
 });
 
+export const AppointmentsContext = createContext({});
 const App = () => {
 	const [landingPageData, setLandingPageData] = useState({});
 	useEffect(() => {
 		setLandingPageData(JsonData);
 	}, []);
 
+	const [unavailableDates, setUnavailableDates] = useState([]);
+
+	useEffect(() => {
+		const fetchDates = async () => {
+			const dates = await GetUnavailableDates();
+			setUnavailableDates(dates);
+		};
+		fetchDates();
+	}, []);
+
 	return (
-		<div>
+		<AppointmentsContext.Provider value={{ unavailable: unavailableDates }}>
 			<Navigation />
 			<Header data={landingPageData.Header} />
 			<About data={landingPageData.About} />
@@ -31,7 +43,7 @@ const App = () => {
 			<Book data={landingPageData.Team} />
 			<Contact data={landingPageData.Contact} />
 			<Footer />
-		</div>
+		</AppointmentsContext.Provider>
 	);
 };
 

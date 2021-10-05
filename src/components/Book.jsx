@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-
+import React, { useState, useContext } from "react";
+import App, { AppointmentsContext } from "../App";
 const initialState = {
 	name: "",
 	second_names: "",
@@ -32,8 +32,9 @@ export default function Book({ data }) {
 		const { name, value } = e.target;
 		setState(prevState => ({ ...prevState, [name]: value }));
 	};
-	const clearState = () => setState({ ...initialState });
+	const unavailableDates = useContext(AppointmentsContext).unavailable;
 
+	const clearState = () => setState({ ...initialState });
 	const handleSubmit = e => {
 		e.preventDefault();
 		console.log({
@@ -75,7 +76,7 @@ export default function Book({ data }) {
 			</div>
 			<form
 				name="sentMessage"
-				validate
+				validate={true}
 				onSubmit={handleSubmit}
 				style={{
 					maxWidth: "80%",

@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Privacy from "./components/Privacy";
 import Legal from "./components/Legal";
 import Cookies from "./components/Cookies";
+import Checkout from "./components/Checkout";
 
 ReactDOM.render(
 	<Router>
@@ -23,6 +24,9 @@ ReactDOM.render(
 				</Route>
 				<Route path="/cookies" exact>
 					<Cookies />
+				</Route>
+				<Route path="/checkout" exact>
+					<Checkout />
 				</Route>
 			</Switch>
 		</React.StrictMode>
