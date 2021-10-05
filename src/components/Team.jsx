@@ -43,37 +43,3 @@ export const Team = props => {
 		</div>
 	);
 };
-
-// <div class="row text-center">
-// 					{props.data
-// 						? props.data.map((d, i) => (
-// 								<div
-// 									class="col-xl-3 col-sm-6 mb-5"
-// 									key={`${d.name}-${i}`}
-// 									style={{ backgroundColor: "blue" }}
-// 								>
-// 									<div class="bg-white rounded shadow-sm py-5 px-4">
-// 										<img
-// 											src="https://bootdey.com/img/Content/avatar/avatar7.png"
-// 											alt=""
-// 											width="100"
-// 											class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm"
-// 										></img>
-// 										<h5 class="mb-0">Manuella Nevoresky</h5>
-// 										<span class="small text-uppercase text-muted">
-// 											CEO - Founder
-// 										</span>
-// 										<ul class="social mb-0 list-inline mt-3">
-// 											<li class="list-inline-item">
-// 												<a href="linkedin" class="social-link">
-// 													<i class="fa fa-linkedin"></i>
-// 												</a>
-// 											</li>
-// 										</ul>
-// 									</div>
-// 								</div>
-// 						  ))
-// 						: "loading"}
-// 				</div>
-// 			</div>
-// 		</div>

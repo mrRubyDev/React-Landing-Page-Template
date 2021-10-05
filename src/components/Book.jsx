@@ -2,12 +2,12 @@ import React, { useState, useContext } from "react";
 import App, { AppointmentsContext } from "../App";
 const initialState = {
 	name: "",
-	second_names: "",
+	second_name: "",
 	email: "",
 	message: "",
 	phone: "",
 	id: "",
-	especialidad: "",
+	doctor: "",
 	fecha: "",
 	hora: "",
 	comentarios: "",
@@ -16,18 +16,19 @@ export default function Book({ data }) {
 	const [
 		{
 			name,
-			second_names,
+			second_name,
 			email,
 			message,
 			phone,
 			id,
-			especialidad,
+			doctor,
 			fecha,
 			hora,
 			comentarios,
 		},
 		setState,
 	] = useState(initialState);
+	const [errorMessage, setErrorMessage] = useState("");
 	const handleChange = e => {
 		const { name, value } = e.target;
 		setState(prevState => ({ ...prevState, [name]: value }));
@@ -35,21 +36,77 @@ export default function Book({ data }) {
 	const unavailableDates = useContext(AppointmentsContext).unavailable;
 
 	const clearState = () => setState({ ...initialState });
+	const canSubmit = () => {
+		const emailSubmit = emailValidation(email);
+		const nameSubmit = nameValidation("Name", name);
+		const secondNameSubmit = nameValidation("Second name", name);
+		const messageSubmit = nameValidation("Message", message);
+		const phoneSubmit = nameValidation("Phone", phone);
+		const idSubmit = nameValidation("ID", id);
+		const doctorSubmit = nameValidation("Doctor", doctor);
+		const dateSubmit = nameValidation("Date", fecha);
+		const hourSubmit = nameValidation("Timing", hora);
+		if (
+			emailSubmit &&
+			nameSubmit &&
+			messageSubmit &&
+			secondNameSubmit &&
+			phoneSubmit &&
+			idSubmit &&
+			doctorSubmit &&
+			dateSubmit &&
+			hourSubmit
+		)
+			return true;
+		else return false;
+	};
+
+	const emailValidation = email => {
+		if (
+			/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(
+				email
+			)
+		) {
+			if (errorMessage.length) setErrorMessage("");
+			return true;
+		}
+		if (email === "") {
+			setErrorMessage("Email is required");
+			return false;
+		}
+		setErrorMessage("Please enter a valid email");
+		return false;
+	};
+
+	const nameValidation = (fieldName, fieldValue) => {
+		if (fieldValue === "") {
+			setErrorMessage(`${fieldName} is required`);
+			return false;
+		}
+		if (fieldValue.length < 3) {
+			setErrorMessage(`${fieldName} needs to be at least three characters`);
+			return false;
+		}
+		if (errorMessage.length) setErrorMessage("");
+		return true;
+	};
 	const handleSubmit = e => {
 		e.preventDefault();
-		console.log({
-			name,
-			second_names,
-			email,
-			message,
-			phone,
-			id,
-			especialidad,
-			fecha,
-			hora,
-			comentarios,
-		});
-		clearState();
+		if (canSubmit) {
+			console.log({
+				name,
+				second_name,
+				email,
+				message,
+				phone,
+				id,
+				doctor,
+				fecha,
+				hora,
+				comentarios,
+			});
+			clearState();
+		}
 	};
 	return (
 		<div
@@ -101,8 +158,8 @@ export default function Book({ data }) {
 						<div className="form-group">
 							<input
 								type="text"
-								id="second_names"
-								name="second_names"
+								id="second_name"
+								name="second_name"
 								className="form-control"
 								placeholder="Apellidos"
 								required
@@ -156,10 +213,10 @@ export default function Book({ data }) {
 						<div className="form-group">
 							<select
 								type="text"
-								id="especialidad"
-								name="especialidad"
+								id="doctor"
+								name="doctor"
 								className="form-control"
-								placeholder="Especialidad - Especialista"
+								placeholder="Doctor"
 								onChange={handleChange}
 							>
 								{data &&
@@ -182,6 +239,7 @@ export default function Book({ data }) {
 								id="date"
 								name="date"
 								className="form-control"
+								required
 								onChange={handleChange}
 							/>
 							<p className="help-block text-danger"></p>
@@ -191,10 +249,11 @@ export default function Book({ data }) {
 						<div className="form-group">
 							<select
 								type="text"
-								id="especialidad"
-								name="especialidad"
+								id="doctor"
+								name="doctor"
 								className="form-control"
-								placeholder="Especialidad - Especialista"
+								placeholder="Doctor"
+								required
 								onChange={handleChange}
 							>
 								<option value="08:00">08:00</option>)
@@ -211,9 +270,8 @@ export default function Book({ data }) {
 						id="message"
 						className="form-control"
 						rows="4"
-						placeholder="Comentarios"
+						placeholder="Motivo de su consulta, síntomas, etc..."
 						style={{ resize: "none" }}
-						required
 						onChange={handleChange}
 					></textarea>
 					<p className="help-block text-danger"></p>
@@ -229,6 +287,9 @@ export default function Book({ data }) {
 					>
 						Reservar
 					</button>
+					{errorMessage.length ? (
+						<h4 style={{ color: "red" }}>{errorMessage}</h4>
+					) : null}
 				</div>
 			</form>
 		</div>
