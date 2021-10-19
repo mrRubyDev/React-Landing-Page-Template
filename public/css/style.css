@@ -176,20 +176,7 @@ hr {
 	transition: all 0.5s linear;
 	border: 0;
 }
-.btn-custom-mod {
-	font-family: "Raleway", sans-serif;
-	text-transform: uppercase;
-	color: #fff;
-	background-color: #5ca9fb;
-	background-image: linear-gradient(to right, #cacaca 0%, #c7c7c7 100%);
-	padding: 14px 34px;
-	letter-spacing: 1px;
-	margin: 0;
-	font-size: 15px;
-	font-weight: 500;
-	transition: all 0.5s linear;
-	border: 0;
-}
+
 .btn-custom:hover,
 .btn-custom:focus,
 .btn-custom.focus,
@@ -253,6 +240,15 @@ a:focus,
 	margin: 0 auto;
 	margin-bottom: 60px;
 }
+
+.add-to-calendar {
+	margin-bottom: 2rem;
+}
+.add-to-calendar:hover {
+	color: lightskyblue;
+	cursor: pointer;
+}
+
 header .intro-text {
 	padding-top: 350px;
 	padding-bottom: 200px;

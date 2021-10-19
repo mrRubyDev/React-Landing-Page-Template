@@ -247,7 +247,7 @@ export default function Book({ data }) {
 								type="text"
 								id="doctor"
 								name="doctor"
-								value="Seleccione un médico"
+								value={doctor ? doctor : "Seleccione un médico"}
 								className="form-control"
 								onChange={handleChange}
 							>
@@ -291,7 +291,11 @@ export default function Book({ data }) {
 								placeholder="Seleccione una hora"
 								required
 								onChange={handleChange}
+								value={hora ? hora : "Seleccione una hora"}
 							>
+								<option disabled defaultValue>
+									Seleccione una hora
+								</option>
 								{POSSIBLE_TIMINGS.filter(
 									el => !forbiddenTimings(doctor, fecha).includes(el)
 								).map((time, id) => (

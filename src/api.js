@@ -5,9 +5,11 @@ const GetUnavailableDates = () => {
 	return GET(getUnavailableDates()).then(checkError).then(toJson);
 };
 const BookAppointment = payload => {
-	return apiCall("POST", bookAppointment(payload.id), payload.appointment)
-		.then(checkError)
-		.then(toJson);
+	return apiCall("POST", bookAppointment(), payload);
 };
 
-export { GetUnavailableDates, BookAppointment };
+const checkoutSession = payload => {
+	return apiCall("POST", checkout(), payload);
+};
+
+export { GetUnavailableDates, BookAppointment, checkoutSession };

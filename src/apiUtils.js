@@ -10,7 +10,7 @@ export const checkError = async response => {
 const myHeaders = new Headers();
 myHeaders.append("Content-Type", "application/json");
 
-export const apiCall = (method, url, payload) => {
+export const apiCall = async (method, url, payload) => {
 	const requestOptions = {
 		method: method,
 		headers: myHeaders,
@@ -18,10 +18,9 @@ export const apiCall = (method, url, payload) => {
 		redirect: "follow",
 	};
 
-	return fetch(url, requestOptions)
-		.then(response => response.text())
-		.then(result => console.log(result))
-		.catch(error => console.log(error));
+	const result = await fetch(url, requestOptions);
+	const body = await result.json();
+	return body;
 };
 
 export const toJson = async response => {

@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-export default function Checkout({ appointment }) {
+export default function Checkout({ appointment, handleSubmit }) {
 	return (
 		<div className="text-center">
 			<div
@@ -115,11 +115,15 @@ export default function Checkout({ appointment }) {
 						}}
 					>
 						<Link to="/#book">
-							<button type="button" className="btn btn-custom-mod btn-lg">
+							<button type="button" className="btn btn-custom btn-lg">
 								Modificar
 							</button>
 						</Link>
-						<button type="submit" className="btn btn-custom btn-lg">
+						<button
+							type="button"
+							className="btn btn-custom btn-lg"
+							onClick={e => handleSubmit(e)}
+						>
 							Confirmar
 						</button>
 					</div>

@@ -6,6 +6,7 @@ import Cookies from "./components/Cookies";
 import App, { AppointmentsContext } from "./App";
 import { GetUnavailableDates } from "./api";
 import CheckoutScreen from "./components/CheckoutScreen";
+import SuccessOrFailure from "./components/SuccessOrFailure";
 export default function AppNavigator() {
 	const [unavailableDates, setUnavailableDates] = useState([]);
 	const [appointment, setAppointment] = useState({
@@ -15,7 +16,8 @@ export default function AppNavigator() {
 		phone: "912319823",
 		id: "adsfadsf",
 		fecha: "2022-01-19",
-		hora: "18:30",
+		hora: "14:00",
+		doctor: "0",
 	});
 
 	useEffect(() => {
@@ -46,6 +48,12 @@ export default function AppNavigator() {
 						</Route>
 						<Route path="/checkout" exact>
 							<CheckoutScreen />
+						</Route>
+						<Route path="/success" exact>
+							<SuccessOrFailure />
+						</Route>
+						<Route path="/failure" exact>
+							<SuccessOrFailure failure />
 						</Route>
 					</Switch>
 				</React.StrictMode>
