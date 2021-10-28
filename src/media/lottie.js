@@ -1,9 +1,9 @@
 import React from "react";
 import Lottie from "react-lottie";
 
-export default function LottieAnimation({ lotti, width, height }) {
+export default function LottieAnimation({ lotti, width, height , loop}) {
 	const defaultOptions = {
-		loop: false,
+		loop: loop ? true: false,
 		animationData: lotti,
 		rendererSettings: {
 			preserveAspectRatio: "xMidYMid slice",

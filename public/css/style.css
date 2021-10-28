@@ -176,6 +176,20 @@ hr {
 	transition: all 0.5s linear;
 	border: 0;
 }
+.btn-custom-green {
+	font-family: "Raleway", sans-serif;
+	text-transform: uppercase;
+	color: #fff;
+	background-color: #5ca9fb;
+	background-image: linear-gradient(to right, #348f50 0%, #34834b 100%);
+	padding: 14px 34px;
+	letter-spacing: 1px;
+	margin: 0;
+	font-size: 15px;
+	font-weight: 500;
+	transition: all 0.5s linear;
+	border: 0;
+}
 
 .btn-custom:hover,
 .btn-custom:focus,

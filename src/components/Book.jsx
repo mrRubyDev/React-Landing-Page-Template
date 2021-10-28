@@ -51,6 +51,9 @@ export default function Book({ data }) {
 	const context = useContext(AppointmentsContext);
 	const unavailableDates = context.unavailable;
 	const history = useHistory();
+	const today = new Date();
+	const tomorrow = new Date(today);
+	tomorrow.setDate(tomorrow.getDate() + 1);
 	const canSubmit = () => {
 		const emailSubmit = emailValidation(email);
 		const nameSubmit = nameValidation("Name", name);
@@ -274,7 +277,7 @@ export default function Book({ data }) {
 								id="fecha"
 								name="fecha"
 								className="form-control"
-								min={new Date().toISOString().split("T")[0]}
+								min={tomorrow.toISOString().split("T")[0]}
 								required
 								onChange={handleChange}
 							/>

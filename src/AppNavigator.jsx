@@ -10,14 +10,14 @@ import SuccessOrFailure from "./components/SuccessOrFailure";
 export default function AppNavigator() {
 	const [unavailableDates, setUnavailableDates] = useState([]);
 	const [appointment, setAppointment] = useState({
-		name: "Mateo",
-		second_name: "Rubinstein",
-		email: "mateorubinstein@icloud.com",
-		phone: "912319823",
-		id: "adsfadsf",
-		fecha: "2022-01-19",
-		hora: "14:00",
-		doctor: "0",
+		name: "",
+		second_name: "",
+		email: "",
+		phone: "",
+		id: "",
+		fecha: "",
+		hora: "",
+		doctor: "",
 	});
 
 	useEffect(() => {
@@ -49,10 +49,10 @@ export default function AppNavigator() {
 						<Route path="/checkout" exact>
 							<CheckoutScreen />
 						</Route>
-						<Route path="/success" exact>
+						<Route path="/success/:id" exact>
 							<SuccessOrFailure />
 						</Route>
-						<Route path="/failure" exact>
+						<Route path="/failure/:id" exact>
 							<SuccessOrFailure failure />
 						</Route>
 					</Switch>

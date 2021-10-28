@@ -1,11 +1,26 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { NavigationExternal } from "./NavigationExternal";
 import LottieAnimation from "../media/lottie";
 import Failed from "../media/wrong-sign.json";
 import Success from "../media/success.json";
 import { Link } from "react-router-dom";
+import { rejectedPayment, approvedPayment } from "../api";
 
 export default function SuccessOrFailure({ failure }) {
+	const [ids, setIds] = useState("");
+
+	// useEffect(() => {
+	// 	setIds(window.location.href.split("-"));
+	// }, []);
+
+	// useEffect(() => {
+	// 	if (failure) {
+	// 		rejectedPayment({ id: ids[1], doctor: ids[0] });
+	// 	} else {
+	// 		approvedPayment({ id: ids[1], doctor: ids[0] });
+	// 	}
+	// }, [ids, failure]);
+
 	return (
 		<div>
 			<NavigationExternal />
@@ -41,7 +56,11 @@ export default function SuccessOrFailure({ failure }) {
 						</div>
 					)} */}
 					<Link to="/">
-						<button type="button" className="btn btn-custom btn-lg">
+						<button
+							type="button"
+							className="btn btn-custom"
+							style={{ marginBottom: "1rem" }}
+						>
 							Inicio
 						</button>
 					</Link>

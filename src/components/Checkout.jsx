@@ -114,18 +114,31 @@ export default function Checkout({ appointment, handleSubmit }) {
 							marginTop: "2rem",
 						}}
 					>
-						<Link to="/#book">
-							<button type="button" className="btn btn-custom btn-lg">
-								Modificar
-							</button>
-						</Link>
-						<button
-							type="button"
-							className="btn btn-custom btn-lg"
-							onClick={e => handleSubmit(e)}
+						<div
+							style={{
+								minWidth: "30%",
+								display: "flex",
+								flexDirection: "column",
+							}}
 						>
-							Confirmar
-						</button>
+							<Link to="/#book">
+								<button
+									type="button"
+									className="btn btn-custom-green"
+									style={{ marginBottom: "2rem", backgroundColor: "green" }}
+								>
+									Modificar
+								</button>
+							</Link>
+							<button
+								type="button"
+								className="btn btn-custom"
+								style={{ marginBottom: "1rem" }}
+								onClick={e => handleSubmit(e)}
+							>
+								Confirmar
+							</button>
+						</div>
 					</div>
 				</form>
 			</div>

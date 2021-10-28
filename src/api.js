@@ -1,4 +1,10 @@
-import { checkout, bookAppointment, getUnavailableDates } from "./routes";
+import {
+	checkout,
+	bookAppointment,
+	getUnavailableDates,
+	rejectPayment,
+	approvePayment,
+} from "./routes";
 import { apiCall, GET, checkError, toJson } from "./apiUtils";
 
 const GetUnavailableDates = () => {
@@ -12,4 +18,17 @@ const checkoutSession = payload => {
 	return apiCall("POST", checkout(), payload);
 };
 
-export { GetUnavailableDates, BookAppointment, checkoutSession };
+const rejectedPayment = payload => {
+	return apiCall("POST", rejectPayment(), payload);
+};
+const approvedPayment = payload => {
+	return apiCall("POST", approvePayment(), payload);
+};
+
+export {
+	GetUnavailableDates,
+	BookAppointment,
+	checkoutSession,
+	approvedPayment,
+	rejectedPayment,
+};
